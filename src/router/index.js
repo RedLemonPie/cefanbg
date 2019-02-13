@@ -85,7 +85,17 @@ export const asyncRouterMap = [
         path: 'addarticle',
         name: 'addarticle',
         component: () => import('@/views/article/addarticle'),
-        meta: { title: '新增文章', icon: 'form',
+        meta: {
+          title: '新增文章', icon: 'form',
+          role: ['admin', 'super_editor', 'editor']
+        }
+      },
+      {
+        path: 'showarticle',
+        name: 'showarticle',
+        component: () => import('@/views/article/showarticle'),
+        meta: {
+          title: '查看文章', icon: 'form',
           role: ['admin', 'super_editor', 'editor']
         }
       }
